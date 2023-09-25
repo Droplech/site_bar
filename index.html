@@ -5,49 +5,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body >
-    <div class="main_container">
-        <header>
-            
-            <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;animation: animateright 0.4s" id="rightMenu">
-                <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
-                <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                <a href="#" class="w3-bar-item w3-button">Link 3</a>
-            </div>
-
-            <div class="w3-teal">
-                <!-- <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button> -->
-                
-                <div class="w3-container">
-                    <div class="name_bar">
-                        <h1>Название</h1>
-                        <p>текст под названием</p>
+    <div class="menu_background"></div>
+    
+    <header>
+        
+        <section class="nav">
+            <div class="main_container">
+                <div class="nav_content">
+                    <div class="logo_name">
+                        <div class="logo_img">
+                            <img src="img/image.jpg" alt="">
+                        </div>
+                        <div class="logo_txt">
+                            <h1>Название бара</h1>
+                            <p>какой то текст</p>
+                        </div>
                     </div>
-                    <button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+                    <div class="burger">
+                        <span class="burger_line line1"></span>
+                        <span class="burger_line line2"></span>
+                        <span class="burger_line line3"></span>
+                    </div>
+                    <div class="burger_menu">
+    
+                        <div class="burger_close">
+                            <span class="burger_line line1"></span>
+                            <span class="burger_line line2"></span>
+                            <span class="burger_line line3"></span>
+                        </div>
+                        
+                        <ul class="burger_menu_list">
+                            <p class="contacts">Контакти</p>
+                            <li>
+                                <a href="#">метка на карте</a>
+                            </li>
+                            <li>
+                                <a href="tel:">номер телефона</a>
+                            </li>
+                            <p class="social">Соцмережі</p>
+                            <li>
+                                <a href="#">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#">Instagram</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    
+    
+    </header>
+    <main>
+        <section class="menu">
+            <div class="ban_img"></div>
+            <div class="main_container">
+                <div class="menu_content">
+                    <div class="menu_list">
+                        <p class="menu_name">Меню</p>
+                        <ul>
+                            
+                            <li class="active-menu_list">
+                                <a href="#">Пункт1</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт2</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт2</a>
+                            </li>
+                        </ul>
+                        <p class="bar_name">Бар</p>
+                        <ul>
+                            
+                            <li>
+                                <a href="#">Пункт1</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт2</a>
+                            </li>
+                            <li>
+                                <a href="#">Пункт2</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu_item">
+                        <div class="punkt1">
+                            <p class="punkt_name">Пункт1</p>
+
+                            <div class="food_card">
+                                <div class="what_goes_contant">
+                                    <span class="what_goes-close">
+                                        <img src="img/left-arrow.png" alt="">
+                                        Назад
+                                    </span>
+                                    <ul class="ingredient_list">
+                                        <li>Інградіент 1</li>
+                                        <li>Інградіент 2</li>
+                                        <li>Інградіент 3</li>
+                                        <li>Інградіент 4</li>
+                                        <li>Інградіент 1</li>
+                                        <li>Інградіент 2</li>
+                                        <li>Інградіент 3</li>
+                                        <li>Інградіент 4</li>
+                                        <li>Інградіент 1</li>
+                                        <li>Інградіент 2</li>
+                                        <li>Інградіент 3</li>
+                                        <li>Інградіент 4</li>
+                                    </ul>
+                                </div>
+                                <div class="food_info">
+                                    <h3 class="food_name">Борщ</h3>
+                                    <p class="food_price">100</p>
+                                    <p class="food_weight">380</p>
+                                    <p class="what_goes">Що входить</p>
+                                </div>
+                                <div class="food_img">
+                                    <img src="img/image.jpg" alt="">
+                                </div>
+
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                    <div class="cafe_info">
+                        <p>Информація про заклад</p>
+                        <ul>
+                            <li>Робочий час</li>
+                            <li>Аддреса закладу</li>
+                            <li>Телефон</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </section>
         
         
-        </header>
-        <main>
-            
-            
-            
+    
+
         
 
-          
-
-         
+        
 
 
-        </main>
-        <footer></footer>
-    </div>
+    </main>
+    <footer></footer>
+   
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 

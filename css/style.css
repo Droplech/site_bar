@@ -1,0 +1,1511 @@
+body{
+    margin: 0;
+    padding: 0;
+   
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h1,h2,h3,p,a{
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+a{
+    text-decoration: none;
+}
+
+
+.main_container{
+    max-width: 1300px;
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+.nav{
+    padding: 20px 0;
+    border-bottom: 1px solid #504d4d45;
+}
+.nav_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo_name{
+    display: flex;
+    align-items: center;
+}
+.logo_img{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+.logo_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.burger{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #504d4d45;
+    
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.burger_line{
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    /* transform: translate(-50%,-50%); */
+}
+
+
+.burger_line.line1{
+    top: 35%;
+}
+.burger_line.line2{
+    top: 50%;
+}
+.burger_line.line3{
+    top: 65%;
+}
+
+.burger_menu{
+    height: 100vh;
+    min-width: 300px;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    background-color: #fff;
+    padding: 32px 16px;
+    border: 1px solid black;
+    transition: 0.3s;
+    z-index: 2;
+}
+.burger_menu-active{
+    right: 0;
+    transition: 0.3s;
+}
+.burger_menu ul li{
+    padding: 16px 0; 
+    border-bottom: 1px solid #504d4d45; 
+    cursor: pointer;
+}
+
+.burger_menu ul .social{
+    margin-top: 16px;
+}
+
+.burger_menu ul li:hover{
+    border-color: #222;
+}
+.contacts, .social{
+    font-size: 20px;
+    font-weight: 600;
+}
+.burger_menu_list li{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.burger_close{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #504d4d45;
+    position: absolute;
+    top: -45px;
+    left: -60px;
+    cursor: pointer;
+    background-color: #fff;
+    
+}
+
+.burger_close:hover{
+    background-color: rgb(233, 53, 53);
+    
+}
+.burger_close:hover .burger_line{
+    background-color: #fff;
+    
+}
+.burger_menu-active .burger_close{
+    top: 10px;
+    transition: 1s;
+}
+
+
+
+.burger_close .burger_line.line1{
+    top: 50%;
+    transform: rotate(45deg);
+}
+.burger_close .burger_line.line2{
+    display: none;
+}
+.burger_close .burger_line.line3{
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+
+
+.menu_background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+}
+
+
+.menu{
+    padding-top: 30px;
+}
+.menu_content{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.menu_content, .menu_list, .cafe_info{
+    
+    flex-basis: 20%;
+}
+.menu_content .menu_item{
+    flex-basis: 60%;
+}
+
+.menu_content .menu_item{
+    
+    padding: 0 20px;
+}
+.menu_item .punkt_name{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.food_card{
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #504d4d45;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.food_img{
+    width: 120px;
+    height: 90px;
+}
+.food_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.food_info p{
+    margin-top: 5px;
+}
+.food_name{
+    font-size: 20px;
+}
+.food_price{
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    color: #03880e;
+}
+.food_weight{
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 600;
+}
+.food_price::after{
+    content: "UAH";
+    margin-left: 5px;
+}
+.food_weight::after{
+    content: "г";
+    
+}
+.what_goes{
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.what_goes_contant{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: #c1bfbf;
+    transition: 0.3s;
+}
+.what_goes-close{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+.what_goes-close img{
+    width: 16px;
+    margin-right: 5px;
+    
+}
+.what_goes-active{
+    left: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+/* .what_goes-close::before{
+    content: "←";
+} */
+
+.ingredient_list{
+    display: flex;
+    
+    flex-wrap: wrap;
+}
+.ingredient_list li{
+    flex-basis: 25%;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+.menu_list ul li{
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.menu_name, .bar_name{
+    font-size: 20px;
+    font-weight: 600;
+}
+.bar_name{
+    margin-top: 10px;
+}
+
+.menu_list li a:hover{
+    color: red;
+    cursor: pointer;
+}
+
+
+.active-menu_list a{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
