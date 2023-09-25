@@ -324,22 +324,62 @@ a{
     color: red;
 }
 
+.cafe_info ul li{
+    margin-bottom: 15px;
+}
+.cafe_info_txt{
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.cafe_info, .time_txt span, .addres_txt span, .phone_txt span{
+    font-size: 14px;
+    font-weight: 600;
+    color: #969494;
+    transition: 0.2s;
+}
+
+.cafe_info, .time_txt p, .addres_txt p, .phone_txt p{
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    margin-top: 5px;
+    transition: 0.2s;
+}
 
 
+.time_icon, .addres_icon, .phone_icon{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    margin-right: 15px;
+    background-color: #ece9e9;
+    border-radius: 5px;
+}
 
+.time_icon img, .addres_icon img, .phone_icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.time_content, .addres_content, .phone_content{
+    display: flex;
+    align-items: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.cafe_info li{
+    cursor: pointer;
+}
+.cafe_info li a:hover p{
+    color: red;
+    transition: 0.2s;
+}
+.cafe_info li a:hover span{
+    color: red;
+    transition: 0.2s;
+}
 
 
 
